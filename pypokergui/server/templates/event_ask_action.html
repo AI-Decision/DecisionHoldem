@@ -1,0 +1,46 @@
+{% extends "base_event.html" %}
+
+{% block event_title %}Declare Your Action{% end %}
+
+{% block event_content %}
+<div id="ask_action">
+  <h3>Hole Card : {{hole_card}}</h3>
+  {% for card in hole_card %}
+    <img class="card" src="{{ static_url("images/card_%s.png" % card) }}" >
+  {% end %}
+  <h3>Valid Actions</h3>
+  <ul class="list-group">
+    {% for action in valid_actions %}
+    <li class="list-group-item">
+    {% if action['action'] == 'call'%}
+        {% if action['amount'] == 0%}
+            <script type="text/javascript">
+                $("#fold").attr("disabled",true)
+            </script>
+        {% else%}
+            <script type="text/javascript">
+                $("#fold").attr("disabled",false)
+            </script>
+        {% end %}
+    {% elif action['action'] == 'raise'%}
+        {% if action['amount']['min'] == -1%}
+            <script type="text/javascript">
+                $("#allin").attr("disabled",true)
+                $("#raise").attr("disabled",true)
+            </script>
+        {% else%}
+            <script type="text/javascript">
+                $("#allin").attr("disabled",false)
+                $("#raise").attr("disabled",false)
+            </script>
+        {% end %}
+    {% end %}
+      <span>{{action['action'].upper()}}</span>
+        :
+      <span {% if action['action'] == 'raise'%} {{ "id=raise_amount" }} {% end %}>{{action['amount']}}</span>
+    </li>
+    {% end %}
+  </ul>
+  <span >>Action History: {{action_histories }}</span>
+</div>
+{% end %}

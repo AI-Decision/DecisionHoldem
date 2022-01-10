@@ -1,0 +1,68 @@
+<div id="poker_game" class="row">
+  <div id="table" class="col-md-6">
+    <h3>Loading...<h3>
+  </div>
+  <div id="info_box" class="info-box img-rounded col-md-6">
+    <div id="event_box">
+    </div>
+    <div id="input_box">
+      <form action="/a/declare_action" method="post" id="declare_action_form">
+        <div class="form-group">
+          <fieldset class="form-group">
+            <legend>Choose your action</legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="action" id="fold" value="fold" checked> FOLD</input>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="action" id="call" value="call" checked> CALL/CHECK</input>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="action" id="allin" value="allin" checked> ALLIN</input>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="action" id="raise" value="raise" checked> RAISE/BET</input>
+              </label>
+            </div>
+          </fieldset>
+          <div class="form-group">
+            <label for="raiseAmoutInput">Raise Amount</label>
+            <input type="text" class="form-control" name="amount" id="raiseAmoutInput" placeholder="Enter raise amount"
+                  style="width:150px">
+          </div>
+          <button type="submit" class="btn btn-primary">delcare action</button>
+            <p id="errorRaise" style="display: none;color:red">error raise</p>
+          <input type="hidden" name="next" value="{{ request.path }}">
+{#              <button type="button" class="btn btn-warning" id="exit_game">下一轮</button>#}
+          {% module xsrf_form_html() %}
+        </div>
+        <!--
+        <table>
+          <tr>
+            <td>
+              <select name="action">
+                <option value="fold">FOLD</option>
+                <option value="call">CALL</option>
+                <option value="raise">RAISE</option>
+              </select>
+            </td>
+            <td><input name="amount"></td>
+            <td style="padding-left:5px">
+              <input type="submit" value="{{ _("declare action") }}"}}>
+              <input type="hidden" name="next" value="{{ request.path }}">
+              {% module xsrf_form_html() %}
+            </td>
+          </tr>
+        </table>
+        -->
+      </form>
+    </div>
+    <div></div> <!-- for creating space -->
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div id="waiting_room">
+  <h1 class="page-header">Game Settings</h1>
+  <div id="config_box">
+    {% include "game_config.html" %}
+  </div>
+  <div id="input_box">
+    <form  id="registration_form" class="form-inline">
+    <div class="form-group">
+      <label for="message">Register Me</label>
+      <input name="body" id="message" class="form-control" placeholder="Enter your name">
+    </div>
+      <input type="submit" value="Register" class="btn btn-primary" style="display:none">
+      <input type="hidden" name="next" value="{{ request.path }}">
+      {% module xsrf_form_html() %}
+    </form>
+    <form  id="start_game_form">
+      <div class="form-group"><!-- need this element for margin --></div>
+      <input type="submit" value="Start Poker" class="btn btn-success">
+      <input type="hidden" name="next" value="{{ request.path }}">
+      {% module xsrf_form_html() %}
+    </form>
+  </div>
+  <div></div> <!-- for adding space -->
+</div>

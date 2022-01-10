@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CASIA-Poker</title>
+      </head>
+      <body>
+        <!-- FIXME displaying all images once is necessarry to display image in "round_state" -->
+        {% for suit in ["S", "D", "H", "C"] %}
+          {% for rank in ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"] %}
+            <img style="display:none" src="{{ static_url("images/card_%s%s.png" % (suit, rank)) }}" >
+          {% end %}
+        {% end %}
+        <img style="display:none" src="{{ static_url("images/poker_pot.png") }}" >
+        {% include "navbar.html" %}
+        <div id="container" class="container">
+          {% include "waiting_room.html %}
+        </div>
+        <link rel="stylesheet" href="{{ static_url("icon.css") }}">
+        <link rel="stylesheet" href="{{ static_url("bootstrap.min.css") }}">
+        <link rel="stylesheet" href="{{ static_url("index.css") }}">
+        <script src="{{ static_url("jquery.min.js") }}" type="text/javascript"></script>
+        <script src="{{ static_url("bootstrap.min.js") }}"></script>
+        <script src="{{ static_url("poker.js") }}" type="text/javascript"></script>
+      </body>
+</html>

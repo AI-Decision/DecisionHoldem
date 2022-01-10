@@ -1,0 +1,28 @@
+{% extends "base_event.html" %}
+
+{% block event_title %}New Action declared{% end %}
+
+{% block event_content %}
+<div id="update_game">
+  <h4> 
+    <span>[ {{ [player['name'] for player in round_state['seats'] if player['uuid']==action['player_uuid']][0] }} ]</span>
+    <span>{{ " declared " }}</span>
+    <span>
+      [{% if action['action'] == "fold" %}
+        {{ action['action'] }}
+      {%else%}
+        {% if action['amount'] == 0 and action['action'] == "call"%}
+          {{ "check"}}
+        {%else%}
+          {{ action['action'] }}
+          {{ " $%s" % action['amount'] }}
+        {% end %}
+      {% end %} ]
+    </span>
+  </h4>
+  <h5>history actions</h5>
+  {% for hisaction in history_actions %}
+    <span>{{hisaction}}</span><br>
+  {% end %}
+</div>
+{% end %}

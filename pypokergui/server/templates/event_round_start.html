@@ -1,0 +1,13 @@
+{% extends "base_event.html" %}
+
+{% block event_title %}Round {{round_count}} Started{% end %}
+
+{% block event_content %}
+<div id="round_start">
+  <h3>Hole Card : {{hole_card}}</h3>
+  {% for card in hole_card %}
+    <img class="card" src="{{ static_url("images/card_%s.png" % card) }}" >
+  {% end %}
+</div>
+{% end %}
+

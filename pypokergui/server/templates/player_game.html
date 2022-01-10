@@ -1,0 +1,49 @@
+<div class="col-xs-4 player-{{"active" if player["state"]=="participating" else "folded"}}">
+  <i class="material-icons md-48
+    {{"inactive" if player["state"]=="folded" else ""}} 
+    {{"color-ai" if len(player["uuid"]) <= 2 else "color-human"}}">
+    {% if len(player['uuid']) >= 2 %}
+      {% for card in round_state['hole_cards'][player['uuid']] %}
+          <img class="hole_card" src="{{ static_url("images/card_%s.png" % card) }}" >
+      {% end %}
+    {% else %}
+      {% for card in round_state['hole_cards'][player['uuid']] %}
+        {%if isopen %}
+          <img class="hole_card" src="{{ static_url("images/card_%s.png" % card) }}" >
+        {%elif player["state"]=="folded"%}
+          <img class="hole_card" src="{{ static_url("images/fold.jpg") }}" >
+        {%else%}
+          <img class="hole_card" src="{{ static_url("images/floded.jpg") }}" >
+        {% end %}
+      {% end %}
+    {% end %}
+  </i>
+  <div>
+    <span class="round-state-table-text player-name">{{player["name"]}}</span></br>
+    <span class="round-state-table-text player-stack">${{player["stack"]}}</span></br>
+    {% if round_state["dealer_btn"]==idx %}
+      <span class="label label-warning">D</span>
+    {% end %}
+    <span class="round-state-table-text action">
+      {% if action != None %}
+        {% if player['uuid']==action['player_uuid'] %}
+          [{% if action['action'] == "fold" %}
+            {{ action['action'] }}
+          {%else%}
+            {% if action['amount'] == 0 and action['action'] == "call"%}
+              {{ "check"}}
+            {%else%}
+              {{ action['action'] }}
+              {{ " $%s" % action['amount'] }}
+            {% end %}
+          {% end %} ]
+        {% end %}
+      {% end %}
+    </span></br>
+    <!--
+    {% if round_state["next_player"]==idx %}
+      <span class="label label-default">Turn</span>
+    {% end %}
+    -->
+  </div>
+</div>

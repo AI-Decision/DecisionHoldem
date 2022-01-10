@@ -1,0 +1,47 @@
+{% extends "base_event.html" %}
+
+{% block event_title %}Round Result{% end %}
+
+{% block event_content %}
+<button type="button" class="btn btn-warning" id="exit_game">下一轮</button>
+<script type="text/javascript">
+var button_ = document.getElementById('exit_game')//.onclick = onClickNext();
+if(button_ != null)
+{
+    console.log("register...")
+    button_.onclick = function () {
+        onClickNext();
+    };
+}
+</script>
+
+<div id="round_result">
+  <h4> Winner => {{ ",".join([player['name'] for player in winners]) }}</h4>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>player</td>
+        <th>hand</th>
+        <th>hole-high</th>
+        <th>hole-low</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for hand in hand_info %}
+      <tr>
+        <td>
+          {{ [player['name'] for player in round_state['seats'] if player['uuid']==hand['uuid']][0] }}
+        </td>
+        <td>{{ hand['hand']['hand']['strength'] }}</td>
+        <td>{{ hand['hand']['hole']['high'] }}</td>
+        <td>{{ hand['hand']['hole']['low'] }}</td>
+      </tr>
+      {% end %}
+    </tbody>
+  </table>
+  <h5>history actions</h5>
+  {% for hisaction in history_actions %}
+    <span>{{hisaction}}</span><br>
+  {% end %}
+</div>
+{% end %}

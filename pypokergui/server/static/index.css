@@ -1,0 +1,110 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+.row-center{
+  text-align:center;
+  letter-spacing:-0.4em;
+  }
+  .row-center > [class*='col-'] {
+  display:inline-block;
+  letter-spacing:0;
+  vertical-align:top;
+  float:none !important;
+}
+
+/*
+* For product stuff
+*/
+
+.card {
+  width: 15%
+}
+
+.hole_card {
+  width: 40%
+}
+
+.card-small {
+  width: 20%
+}
+
+.pot {
+  width: 10%
+}
+
+.info-box {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+#event_content {
+  padding: 10px;
+}
+
+#round-state-table {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #2E7D32;
+  font-size:1.5em;
+}
+
+.round-state-table-text {
+  color: #ffffff;
+}
+
+.action {
+  color: black;
+}
+/*
+* For Google Icon Font
+*/
+
+/* option class for icon size*/
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* option class for icon color */
+.material-icons.color-ai { color: #E8F5E9; }
+.material-icons.color-ai.inactive { color: #212121; }
+.material-icons.color-ai.dark { color: #43A047; }
+.material-icons.color-ai.dark.inactive { color: #212121; }
+.material-icons.color-human { color: #FAFAFA; }
+.material-icons.color-human.inactive { color: #212121; }
+.material-icons.color-human.dark { color: #757575; }
+.material-icons.color-human.dark.inactive { color: #212121; }
+
+.material-icons.orange600 { color: #FB8C00; }
+ 
+.material-icons.md-dark { color: rgba(0, 0, 0, 1.0); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+ 
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

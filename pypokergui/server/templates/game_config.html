@@ -1,0 +1,45 @@
+  <div id="rule_box">
+    <h2 class="sub-header">Rule</h2>
+      <div id="game_rule">
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>max round</th>
+                <th>initial stack</th>
+                <th>small blind</th>
+                <th>big blind</th>
+              <tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ config.rule['max_round'] }}</td>
+                <td>{{ config.rule['initial_stack'] }}</td>
+                <td>{{ config.rule['small_blind'] }}</td>
+                <td>{{ config.rule['big_blind'] }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+  <div id="player_box">
+    <h2 class="sub-header">Players</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>player type</th>
+            <th>player name</th>
+          <tr>
+        </thead>
+        <tbody>
+            {% for player in config.members_info %}
+              {% include "player.html" %}
+            {% end %}
+        </tbody>
+      </table>
+    </div>
+    <ul>
+    </ul>
+  </div>

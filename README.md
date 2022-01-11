@@ -4,15 +4,15 @@ An imperfect information game is a type of game with asymmetric information. Com
 
 This project introduces DecisionHoldem, a high-level AI for heads-up no-limit Texas hold'em with safer depth-limited solving with diverse opponents ranges to reduce the exploitability of the strategy.DecisionHoldem is mainly composed of two parts, namely the blueprint strategy and the real-time search part. 
 
-In the blueprint strategy part, DecisionHoldem first employs the hand abstraction technique and action abstraction to obtain an abstracted game. Then we used the linear CFR algorithm iteration on the abstracted game tree to calculate blueprint strategy on a workstation with 48 core CPUs for 3 - 4 in the real-time search part. The total number of iterations is about 200 million. 
+In the blueprint strategy part, DecisionHoldem first employs the hand abstraction technique and action abstraction to obtain an abstracted game. Then we used the linear CFR algorithm iteration on the abstracted game tree to calculate blueprint strategy on a workstation with 48 core CPUs for 3 - 4 days. The total number of iterations is about 200 million. 
 
-In the real-time search part, We propose a safer depth-limited solving algorithm than modicum's depth-limited solving algorithm on subgame by putting more possible ranges of opponent private hands into consideration for off-tree nodes. This algorithm can significantly improve the AI game level by reducing the exploitability of the strategy. The details of the algorithm will be introduced in subsequent articles soon.
+In the real-time search part, we propose a safer depth-limited solving algorithm than modicum's depth-limited solving algorithm on subgame by putting more possible ranges of opponent private hands into consideration for off-tree nodes. This algorithm can significantly improve the AI game level by reducing the exploitability of the strategy. The details of the algorithm will be introduced in subsequent articles soon.
 
 To evaluate the performance of DecisionHoldem, we play it against Slumbot and OpenStackTwo, respectively. Slumbot is the champion of the 2018 Anual Computer Poker Competition and the only high-level poker AI currently available. About 20,000 games against Slumbot, DecisionHoldem's average profit is more remarkable than 700mbb/h, and it ranked first in statistics on November 26, 2021 (DecisionHoldem's name on the ranking is zqbAgent[2,4]). OpenStackTwo built-in OpenHoldem Texas Hold'em Confrontation Platform is a reproduced version of DeepStack. With about 2,000 games against OpenStack[1,3], DecisionHoldem's average profit is more excellent than 700mbb/h. 
 
 
 
-To promote artificial intelligence development in imperfect games,  we have open-sourced the relevant code of DecisionHoldem with tools for playing against the Slumbot, OpenHoldem and human[6]. Meanwhile, we provide [a simple program about Leduc poker](https://github.com/zqbAse/PokerAI_Sim), which helps to understand the algorithm framework and work mechanism.
+To promote artificial intelligence development in imperfect-information games,  we have open-sourced the relevant code of DecisionHoldem with tools for playing against the Slumbot, OpenHoldem and human[6]. Meanwhile, we provide [a simple program about Leduc poker](https://github.com/zqbAse/PokerAI_Sim), which helps to understand the algorithm framework and its mechanism.
 
 
 

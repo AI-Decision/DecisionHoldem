@@ -166,10 +166,10 @@ https://github.com/zqbAse/PokerAI_Sim
 
 # Authors
 
-This project is contributed by the Institute of Automation, Chinese Academy of Sciences. The leading R & D personnel are  [Dongdong Bai](https://scholar.google.com/citations?user=qzJf6lkAAAAJ&hl=zh-CN&oi=ao)  and Zhou Qibin under the guidance of [ Junge Zhang](https://scholar.google.com/citations?user=gbStvusAAAAJ&hl=zh-CN&oi=ao) and [Kaiqi Huang](https://scholar.google.com/citations?user=caQ-OmYAAAAJ&hl=zh-CN&oi=ao). In recent years, the team has been mainly committed to researching theories, algorithms, platforms, and agents related to game decision-making intelligence. It is an early research team in China to carry out StarCraft AI research. They won fourth place in the 2017 AIIDE StarCraft Competition and were the second runner-up in the 2018 AIIDE StarCraft Competition.
+The project leader is Junge Zhang, and the main contributors are [Dongdong Bai](https://scholar.google.com/citations?user=qzJf6lkAAAAJ&hl=zh-CN&oi=ao) and Qibin Zhou.  [Kaiqi Huang](https://scholar.google.com/citations?user=caQ-OmYAAAAJ&hl=zh-CN&oi=ao) co-supervises this project. In recent years, this team has been devoting to reinforcement learning, multi-agent system, decision-making intelligence. 
 
 If you use DecisionHoldem in your research, please cite follow paper.
 
 ```
-Qibin Zhou, Dongdong Bai, Junge Zhang, Fuqing Duan, Kaiqi Huang. Decisionholdem: Safer Depth-Limited Solving With Diverse Opponents for Imperfect-Information Games
+Qibin Zhou, Dongdong Bai, Junge Zhang, Fuqing Duan, Kaiqi Huang. DecisionHoldem: Safer Depth-Limited Solving With Diverse Opponents for Imperfect-Information Games
 ```

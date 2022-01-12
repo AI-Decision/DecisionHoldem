@@ -168,7 +168,7 @@ https://github.com/zqbAse/PokerAI_Sim
 
 The project leader is [Junge Zhang](http://people.ucas.edu.cn/~ZHANGJUNGE?language=en) , and the main contributors are [Dongdong Bai](https://scholar.google.com/citations?user=qzJf6lkAAAAJ&hl=zh-CN&oi=ao) and Qibin Zhou.  [Kaiqi Huang](https://scholar.google.com/citations?user=caQ-OmYAAAAJ&hl=zh-CN&oi=ao) co-supervises this project as well. In recent years, this team has been devoting to reinforcement learning, multi-agent system, decision-making intelligence. 
 
-If you use DecisionHoldem in your research, please cite follow paper.
+If you use DecisionHoldem in your research, please cite the following paper.
 
 ```
 Qibin Zhou, Dongdong Bai, Junge Zhang, Fuqing Duan, Kaiqi Huang. DecisionHoldem: Safer Depth-Limited Solving With Diverse Opponents for Imperfect-Information Games

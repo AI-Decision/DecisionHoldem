@@ -8,11 +8,11 @@ In the blueprint strategy part, DecisionHoldem first employs the hand abstractio
 
 In the real-time search part, we propose a safer depth-limited solving algorithm than modicum's depth-limited solving algorithm on subgame by putting more possible ranges of opponent private hands into consideration for off-tree nodes. This algorithm can significantly improve the AI game level by reducing the exploitability of the strategy. The details of the algorithm will be introduced in subsequent articles soon.
 
-To evaluate the performance of DecisionHoldem, we play it against Slumbot and OpenStackTwo, respectively. Slumbot is the champion of the 2018 Anual Computer Poker Competition and the only high-level poker AI currently available. About 20,000 games against Slumbot, DecisionHoldem's average profit is more remarkable than 700mbb/h, and it ranked first in statistics on November 26, 2021 (DecisionHoldem's name on the ranking is zqbAgent[2,4]). OpenStackTwo built-in OpenHoldem Texas Hold'em Confrontation Platform is a reproduced version of DeepStack. With about 2,000 games against OpenStack[1,3], DecisionHoldem's average profit is more excellent than 700mbb/h. 
+To evaluate the performance of DecisionHoldem, we play it against Slumbot and OpenStackTwo, respectively. Slumbot is the champion of the 2018 Anual Computer Poker Competition and the only high-level poker AI currently available. About 20,000 games against Slumbot, DecisionHoldem's average profit is more remarkable than 730mbb/h, and it ranked first in statistics on November 26, 2021 (DecisionHoldem's name on the ranking is zqbAgent[2,3]). OpenStackTwo built-in OpenHoldem Texas Hold'em Confrontation Platform is a reproduced version of DeepStack. With about 2,000 games against OpenStack[1], DecisionHoldem's average profit is more excellent than 700mbb/h. 
 
 
 
-To promote artificial intelligence development in imperfect-information games,  we have open-sourced the relevant code of DecisionHoldem with tools for playing against the Slumbot, OpenHoldem and human[6]. Meanwhile, we provide [a simple program about Leduc poker](https://github.com/zqbAse/PokerAI_Sim), which helps to understand the algorithm framework and its mechanism.
+To promote artificial intelligence development in imperfect-information games,  we have open-sourced the relevant code of DecisionHoldem with tools for playing against the Slumbot, OpenHoldem and human[5]. Meanwhile, we provide [a simple program about Leduc poker](https://github.com/zqbAse/PokerAI_Sim), which helps to understand the algorithm framework and its mechanism.
 
 
 
@@ -159,10 +159,9 @@ https://github.com/zqbAse/PokerAI_Sim
 # Note 
 [1] www.holdem.ia.ac.cn  
 [2] www.slumbot.com  
-[3] Since OpenStack is often unresponsive, it's difficult to do a lot of testing in a limited amount of time. We save the 2000 games as 'Agent_against_OpenStackTwo.txt' in the project.   
-[4] https://github.com/ericgjackson/slumbot2017/issues/11  
-[5] Development Environment：A workstation with an Intel(R) Xeon(R) Gold 6240R CPU, and 512GB of RAM.  
-[6] Currently some source codes only provide compiled files, and they will be open sourced in the near future. 
+[3] https://github.com/ericgjackson/slumbot2017/issues/11  
+[4] Development Environment：A workstation with an Intel(R) Xeon(R) Gold 6240R CPU, and 512GB of RAM.  
+[5] Currently some source codes only provide compiled files, and they will be open sourced in the near future. 
 
 # Authors
 
@@ -171,5 +170,5 @@ The project leader is [Junge Zhang](http://people.ucas.edu.cn/~ZHANGJUNGE?langua
 If you use DecisionHoldem in your research, please cite the following paper.
 
 ```
-Qibin Zhou, Dongdong Bai, Junge Zhang, Fuqing Duan, Kaiqi Huang. DecisionHoldem: Safer Depth-Limited Solving With Diverse Opponents for Imperfect-Information Games
+Qibin Zhou, Dongdong Bai, Junge Zhang, Fuqing Duan, Kaiqi Huang. DecisionHoldem: Safe Depth-Limited Solving With Diverse Opponents for Imperfect-Information Games
 ```

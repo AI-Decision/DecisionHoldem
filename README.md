@@ -172,3 +172,7 @@ If you use DecisionHoldem in your research, please cite the following paper.
 ```
 Qibin Zhou, Dongdong Bai, Junge Zhang, Fuqing Duan, Kaiqi Huang. DecisionHoldem: Safe Depth-Limited Solving With Diverse Opponents for Imperfect-Information Games
 ```
+
+## License
+[GNU Affero General Public License v3.0](LICENSE)
+

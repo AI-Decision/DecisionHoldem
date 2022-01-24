@@ -1,3 +1,20 @@
+################################################################################
+#
+#   Copyright 2022 The DecisionHoldem Authors，namely，Qibin Zhou，
+#   Dongdong Bai，Junge Zhang and Kaiqi Huang. All Rights Reserved.
+#
+#   Licensed under the GNU AFFERO GENERAL PUBLIC LICENSE
+#                 Version 3, 19 November 2007
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#   GNU Affero General Public License for more details.
+#
+#   You should have received a copy of the GNU Affero General Public License 
+#   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+################################################################################
 #pragma once
 #include "Node.h"
 #include <string.h>

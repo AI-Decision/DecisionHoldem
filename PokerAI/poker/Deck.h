@@ -1,3 +1,20 @@
+################################################################################
+#
+#   Copyright 2022 The DecisionHoldem Authorsï¼Œnamelyï¼ŒQibin Zhouï¼Œ
+#   Dongdong Baiï¼ŒJunge Zhang and Kaiqi Huang. All Rights Reserved.
+#
+#   Licensed under the GNU AFFERO GENERAL PUBLIC LICENSE
+#                 Version 3, 19 November 2007
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#   GNU Affero General Public License for more details.
+#
+#   You should have received a copy of the GNU Affero General Public License 
+#   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+################################################################################
 #pragma once
 #include <map>
 #include <algorithm>
@@ -5,7 +22,7 @@
 //#include <stdlib.h>
 #include "../util/Randint.h"
 using namespace std;
-//²»ÓÃµ£ĞÄPokerstate newstate= state,¸³Öµcur_indexºÍrandi£¬ÒòÎªÖ»ÔÚ³õÊ¼ÊÖÅÆÊ±ºòÓÃ£¬ÓÃÍê¾Í²»ÓÃÁË
+//ä¸ç”¨æ‹…å¿ƒPokerstate newstate= state,èµ‹å€¼cur_indexå’Œrandiï¼Œå› ä¸ºåªåœ¨åˆå§‹æ‰‹ç‰Œæ—¶å€™ç”¨ï¼Œç”¨å®Œå°±ä¸ç”¨äº†
 const int total_cards = 52;
 class Deck {
 public:
@@ -28,7 +45,7 @@ public:
 			cards[i] = i;
 		for (int i = 0; i < len; i++) 
 			cards[i] = exclude[i];
-		bool vis[9] = { false };//ÕÒ³öĞ¡ÓÚ9(len)µÄÊı,È«²¿Îªtrue
+		bool vis[9] = { false };//æ‰¾å‡ºå°äº9(len)çš„æ•°,å…¨éƒ¨ä¸ºtrue
 		for (int i = 0; i < len; i++)
 			if (exclude[i] < len) {
 				if (!vis[exclude[i]])
@@ -36,7 +53,7 @@ public:
 				else
 					throw exception();
 			}
-		int k = 0;			///°ÑÃ»ÓÃ¹ıfalseµÄĞ¡ÓÚ9(len)µÄÊı»»µ½´óÓÚ9µÄÊÖÅÆÎ»ÖÃ
+		int k = 0;			///æŠŠæ²¡ç”¨è¿‡falseçš„å°äº9(len)çš„æ•°æ¢åˆ°å¤§äº9çš„æ‰‹ç‰Œä½ç½®
 		for (int i = 0; i < len; i++)
 			if (exclude[i] >= len) {
 				while (vis[k]) k++;

@@ -28,7 +28,7 @@ To promote artificial intelligence development in imperfect-information games,  
 ### Installation
 1. Clone repositories:
 ```
-$ git clone https://github.com/CodeBot416/DecisionHoldem.git
+$ git clone https://github.com/AI-Decision/DecisionHoldem.git
 ```
 2. copy followed file to DecisionHoldem/PokerAI/cluster
 ```

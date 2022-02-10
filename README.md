@@ -170,7 +170,12 @@ The project leader is [Junge Zhang](http://people.ucas.edu.cn/~ZHANGJUNGE?langua
 If you use DecisionHoldem in your research, please cite the following paper.
 
 ```
-Qibin Zhou, Dongdong Bai, Junge Zhang, Fuqing Duan, Kaiqi Huang. DecisionHoldem: Safe Depth-Limited Solving With Diverse Opponents for Imperfect-Information Games
+@article{zhou2022decisionholdem,
+  title={DecisionHoldem: Safe Depth-Limited Solving With Diverse Opponents for Imperfect-Information Games},
+  author={Zhou, Qibin and Bai, Dongdong and Zhang, Junge and Duan, Fuqing and Huang, Kaiqi},
+  journal={arXiv preprint arXiv:2201.11580},
+  year={2022}
+}
 ```
 
 ## License

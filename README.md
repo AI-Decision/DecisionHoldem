@@ -84,7 +84,8 @@ Tt is necessary that AlascasiaHoldem.so is in directory "DecisionHoldem/PokerAI/
 
 ## Slumbot Against Agent
 [https://www.slumbot.com/#](https://www.slumbot.com/#)   
-Results on November 26, 2021, DecisionHoldem registered as zqbAgent and ranked first in the leaderboard.
+<!-- Results on November 26, 2021, DecisionHoldem registered as zqbAgent and ranked first in the leaderboard. -->
+Results on Slumbot, DecisionHoldem registered as zqbAgent and ranked first in the leaderboard.
 * Run:
 ```shell
 $ cd DecisionHoldem/PokerAI/
